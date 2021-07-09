@@ -1,16 +1,21 @@
 import React from 'react';
 
-const Chirp = (props) => {
-    return (
-        <>
-            <div className="chirp">
-                <img src={props.chirp.image}
-                    alt="egg" width="75px" height="75px" />
-                <h3>@{props.chirp.username}</h3>
-                <p>{props.chirp.chirpText}</p>
-            </div>
-        </>
-    );
-};
+class Chirp extends React.Component {
+
+    render() {
+        return (
+            <>
+                <div className="chirp">
+                    <img src={this.props.chirp.image}
+                        alt="egg" width="75px" height="75px" />
+                    <h3>@{this.props.chirp.username}</h3>
+                    <p>{this.props.chirp.chirpText}</p>
+                </div>
+            </>
+        );
+    }
+
+
+}
 
 export default Chirp;
